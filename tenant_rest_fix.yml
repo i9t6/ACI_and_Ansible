@@ -20,7 +20,7 @@
             "attributes": {
               "name": "{{ tenant }}",
               "dn": "uni/tn-{{ tenant }}",
-              "descr": "Tenana configured with Ansible and ACI REST API"
+              "descr": "Tenant configured with AWX-Ansible and ACI REST API"
             }
           }
         }
