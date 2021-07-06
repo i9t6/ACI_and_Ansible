@@ -13,6 +13,18 @@
     register: mytenant
     delegate_to: localhost
 
+  - name: Create Tenants using CSV and loop
+    aci_tenant:
+      hostname: "{{ hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      #private_key: "{{ username }}.key"
+      tenant: "{{ item.tenant }}"
+      description: "Tenant configured by Ansible"
+      validate_certs: false
+      state: present
+    loop: "{{ mytenant.list }}"
+
   - name: Create ansible-VRF
     aci_vrf:
       hostname: "{{ hostname }}"

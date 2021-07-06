@@ -1,5 +1,6 @@
 ---
 # The variables for the three tier playbook
+   tenant: AWX-ACI-ACC-Tenant-3-Tiers
    vrf: acc_ansible-VRF
    bd:
      name: acc_ansible-BD

@@ -9,6 +9,17 @@
     - ./external_vars_fix.yml
   
   tasks:
+  - name: Create Ansible Tenant
+    aci_tenant:
+      hostname: "{{ hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      #private_key: "{{ username }}.key"
+      tenant: "{{ tenant }}"
+      description: "Tenant configured by Ansible"
+      validate_certs: no
+      state: present
+
   - name: Create ansible-VRF
     aci_vrf:
       hostname: "{{ hostname }}"
