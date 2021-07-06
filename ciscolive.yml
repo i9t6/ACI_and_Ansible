@@ -9,8 +9,10 @@
   - name: Create a New Tenant
     aci_tenant:
         hostname: "{{ inventory_hostname }}"
-        username: "{{ username }}"
-        password: "{{ password }}"
+        #username: "{{ username }}"
+        #password: "{{ password }}"
+        username: admin
+        password: ciscopsdt
         #private_key: "{{ new_user }}.key"
         tenant: "CiscoLive"
         description: "Tenant configured by Ansible"
