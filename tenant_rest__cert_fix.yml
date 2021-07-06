@@ -8,9 +8,9 @@
   - name: Add a tenant using a JSON string
     aci_rest:
       hostname: "{{ hostname }}"
-      #username: "{{ username }}"
+      username: "{{ ansible_username }}"
       #password: "{{ password }}"
-      #private_key: "{{ username }}.key"
+      private_key: "{{ ansible_ssh_private_key_file }}"
       validate_certs: no
       path: /api/mo/uni.json
       method: post
