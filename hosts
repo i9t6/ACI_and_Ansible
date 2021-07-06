@@ -1,8 +1,0 @@
-# hosts file for Ansible playbook
-[apic]
-#Basic Authentication
-198.19.202.94 username=admin password=C1sco12345! new_user=ansible new_user_pass=C1sco12345
-#Signature-based Authentication
-#198.19.202.94 username=acc_ansible private_key=acc_ansible.key
-
-

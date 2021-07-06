@@ -1,16 +1,16 @@
 ---
 - name: Tenant configuration with rest call
-  hosts: apic
+  hosts: "{{ host_name }}"
   connection: local
   gather_facts: no
 
   tasks:
   - name: Add a tenant using a JSON string
     aci_rest:
-      hostname: "{{ inventory_hostname }}"
-      username: "{{ new_user }}"
-      #password: "{{ password }}"
-      private_key: "{{ new_user }}.key"
+      hostname: "{{ hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      #private_key: "{{ username }}.key"
       validate_certs: no
       path: /api/mo/uni.json
       method: post
@@ -18,8 +18,8 @@
         {
           "fvTenant": {
             "attributes": {
-              "name": "ansible_rest_tenant",
-              "dn": "uni/tn-ansible_rest_tenant",
+              "name": "{{ tenant }}",
+              "dn": "uni/tn-{{ tenant }}",
               "descr": "Tenana configured with Ansible and ACI REST API"
             }
           }
