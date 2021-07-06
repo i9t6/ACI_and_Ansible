@@ -1,14 +1,14 @@
 ---
 # Demo ACI Playbook
 - name: Configuring Example Tenant
-  hosts: devnet
+  hosts: "{{ host_name }}"
   connection: local
   gather_facts: no
 
   tasks:
   - name: Create a New Tenant
     aci_tenant:
-        hostname: "{{ host }}"
+        hostname: "{{ hostname }}"
         #hostname: sandboxapicdc.cisco.com
         username: "{{ username }}"
         password: "{{ password }}"
