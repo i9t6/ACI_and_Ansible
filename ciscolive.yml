@@ -16,7 +16,7 @@
         #password: ciscopsdt
         #private_key: "{{ new_user }}.key"
         #tenant: "CiscoLive"
-        tenant: {{ tenant }}
+        tenant: "{{ tenant }}"
         description: "Tenant configured by Ansible"
         validate_certs: no
         state: present
