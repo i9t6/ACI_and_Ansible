@@ -10,10 +10,10 @@
     aci_tenant:
         hostname: "{{ host }}"
         #hostname: sandboxapicdc.cisco.com
-        #username: "{{ username }}"
-        #password: "{{ password }}"
-        username: admin
-        password: ciscopsdt
+        username: "{{ username }}"
+        password: "{{ password }}"
+        #username: admin
+        #password: ciscopsdt
         #private_key: "{{ new_user }}.key"
         tenant: "CiscoLive"
         description: "Tenant configured by Ansible"
