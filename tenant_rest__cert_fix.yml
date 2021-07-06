@@ -10,7 +10,7 @@
       hostname: "{{ hostname }}"
       username: "{{ username }}"
       #password: "{{ password }}"
-      #private_key: "{{ username }}.key"
+      private_key: "{{ username }}.key"
       validate_certs: no
       path: /api/mo/uni.json
       method: post
