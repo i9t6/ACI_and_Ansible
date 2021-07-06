@@ -8,7 +8,7 @@
   tasks:
   - name: Create a New Tenant
     aci_tenant:
-        hostname: "{{ inventory_hostname }}"
+        #hostname: "{{ inventory_hostname }}"
         #username: "{{ username }}"
         #password: "{{ password }}"
         username: admin
