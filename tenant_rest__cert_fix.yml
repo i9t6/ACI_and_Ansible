@@ -12,7 +12,7 @@
   - name: Add a tenant using a JSON string
     aci_rest:
       hostname: "{{ hostname }}"
-      #username: "ansible"
+      username: "ansible"
       #password: "{{ password }}"
       private_key: "{{ secret_key }}"
       #username: "{{ lookup('env', 'ANSIBLE_NET_USERNAME') }}"
