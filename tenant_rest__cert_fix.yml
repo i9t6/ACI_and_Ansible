@@ -8,6 +8,9 @@
   - name: Print the environment vars on the localhost
     shell: printenv
     delegate_to: localhost
+   - name: DISPLAY THE INJECTED EXTRA VAR
+     debug:
+       var: secret_key
       
   - name: Add a tenant using a JSON string
     aci_rest:
