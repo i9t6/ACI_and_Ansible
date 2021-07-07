@@ -7,7 +7,7 @@
   tasks:
   - name: Print the environment vars on the localhost
     shell: printenv
-      delegate_to: localhost
+    delegate_to: localhost
       
   - name: Add a tenant using a JSON string
     aci_rest:
