@@ -3,6 +3,8 @@
   hosts: "{{ host_name }}"
   connection: local
   gather_facts: no
+  vars:
+    temp_key: "{{ lookup ('env', 'ANSIBLE_NET_SSH_KEYFILE') }}"
 
   tasks:
   - name: Print the environment vars on the localhost
@@ -21,7 +23,7 @@
       #private_key: "{{ lookup( 'file' , '{{ secret_key }}') }}"
       username: "{{ lookup('env', 'ANSIBLE_NET_USERNAME') }}"
       #private_key: "{{ lookup('env', 'ANSIBLE_NET_SSH_KEYFILE') }}"
-      temp_key: "{{ lookup ('env', 'ANSIBLE_NET_SSH_KEYFILE') }}"
+      
       private_key: "{{ lookup('file', '{{ temp_key }}') }}"
       
       validate_certs: no
