@@ -21,7 +21,7 @@
       #private_key: "{{ lookup( 'file' , '{{ secret_key }}') }}"
       username: "{{ lookup('env', 'ANSIBLE_NET_USERNAME') }}"
       #private_key: "{{ lookup('env', 'ANSIBLE_NET_SSH_KEYFILE') }}"
-      private_key: "{{ lookup('file', '{{ ANSIBLE_NET_SSH_KEYFILE }}') }}"
+      private_key: "{{ lookup('file', '{{ lookup ('env', 'ANSIBLE_NET_SSH_KEYFILE') }}') }}"
       
       validate_certs: no
       path: /api/mo/uni.json
