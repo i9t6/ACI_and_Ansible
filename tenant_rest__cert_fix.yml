@@ -18,7 +18,7 @@
       hostname: "{{ hostname }}"
       username: "ansible"
       #password: "{{ password }}"
-      private_key: "{{ secret_key }}"
+      private_key: "{{ secret_key }}.key"
       #username: "{{ lookup('env', 'ANSIBLE_NET_USERNAME') }}"
       #private_key: "{{ lookup('env', 'ANSIBLE_NET_SSH_KEYFILE') }}"
       
