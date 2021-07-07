@@ -12,11 +12,12 @@
   - name: Add a tenant using a JSON string
     aci_rest:
       hostname: "{{ hostname }}"
-      #username: "{{ ansible_ssh_user }}"
+      #username: "ansible"
       #password: "{{ password }}"
-      #private_key: "{{ ansible_ssh_private_key_file }}"
-      username: "{{ lookup('env', 'ANSIBLE_NET_USERNAME') }}"
-      private_key: "{{ lookup('env', 'ANSIBLE_NET_SSH_KEYFILE') }}"
+      private_key: "{{ secret_key }}"
+      #username: "{{ lookup('env', 'ANSIBLE_NET_USERNAME') }}"
+      #private_key: "{{ lookup('env', 'ANSIBLE_NET_SSH_KEYFILE') }}"
+      
       validate_certs: no
       path: /api/mo/uni.json
       method: post
